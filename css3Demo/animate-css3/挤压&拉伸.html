@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>挤压和拉伸 (Squash and stretch)</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #e9b59f;
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+        }
+        h1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: 300;
+            color: #FFFFFF;
+        }
+
+        h2{
+            position: absolute;
+            bottom:0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .principles{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .shape{
+            background:#2d97db;
+            border: 1em solid #FFFFFF;
+            width: 4em;
+            height: 4em;
+            position: absolute;
+            top: calc(50% - 2em);
+            left: calc(50% - 2em);
+        }
+
+        .one .surface{
+            background: #000;
+            height: 10em;
+            width: 1em;
+            position: absolute;
+            left: calc(50% + 10em);
+            top: calc(50% - 4em);
+        }
+
+        .one .shape{
+            animation: one 10s infinite ease-out;
+        }
+
+        @keyframes one {
+            0% , 15% {
+                opacity: 0;
+            }
+            15%, 25% {
+                transform: none;
+                animation-timing-function: cubic-bezier(1,-1.92,.95,.89);
+                height: 6em;
+                width: 6em;
+
+                top: calc(50% - 6em);
+                left: calc(50% - 6em);
+                opacity: 1;
+                border:1px solid palegreen;
+            }
+
+            35%, 45% {
+                transform: translateX(8em);
+                height: 10em;
+                width: 2em;
+                top: calc(50% - 5em);
+                animation-timing-function: linear;
+                opacity: 1;
+                border: 1px solid red;
+            }
+
+            70%,100%{
+                transform: translateX(8em) translateY(5em);
+                height: 6em;
+                width: 2em;
+                top: calc(50% - 3em);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>1.squash and stretch</h1>
+    <article class="principles one">
+        <div class="shape"></div>
+        <div class="surface"></div>
+    </article>
+    <h2>animation principles for web</h2>
+</body>
+</html>

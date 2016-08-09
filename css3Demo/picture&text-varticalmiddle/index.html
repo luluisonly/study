@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片和文字垂直居中的几种方式</title>
+    <style>
+       [class^='box'],[class*='box']{
+           margin: 20px;
+       }
+        .box1 .icon-down{
+            display: inline-block;
+            background: url("../flex/images/down.png") no-repeat 50% 50%;
+            width: 20px;
+            height: 1ex;
+        }
+        .box2 .icon-drop{
+            display: inline-block;
+            background: url("../flex/images/drop.png") no-repeat center;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        .box3,.box4,.box5{
+            background: cadetblue;
+        }
+        .box4 > img{
+            display: inline-block;
+            vertical-align: bottom;/*幽灵空白区域 只要不是vertical-align：baseline,其他任何属性都可以*/
+        }
+        .box5 > img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<strong>图片和背景小图标垂直居中(背景图片是1个x高度例如down.png)</strong>
+<div class="box1">
+    ceshi<i class="icon-down"></i><br>
+    测试 <i class="icon-down"></i>
+</div>
+<strong>图片和背景小图标垂直居中(背景图片是大于1个x高度例如drop.png，只能使用vertical-align：middle)</strong>
+<div class="box2">
+    ceshi<i class="icon-drop"></i><br>
+    测试 <i class="icon-drop"></i>
+</div>
+<strong>div中img图片和文字垂直居中图片和div底部有间隙</strong>
+<div class="box3">
+    <img src="http://placekitten.com/200/201"/>
+</div>
+<strong>(1)div中img图片和文字垂直居中图片和div底部有间隙</strong>
+<div class="box4">
+    <img src="http://placekitten.com/200/201"/>
+    dfsfsjakfkfdjkaf
+</div>
+<strong>(2)div中img图片和文字垂直居中图片和div底部有间隙</strong>
+<div class="box5">
+    <img src="http://placekitten.com/200/201"/>
+    dfsfsjakfkfdjkaf
+</div>
+</body>
+</html>

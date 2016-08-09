@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多行文本垂直居中</title>
+    <style>
+        .box3{
+            height: 100px;
+            line-height: 100px;
+            width: 980px;
+            font-size: 15px;
+            background: gainsboro;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            width: 980px;
+            height: 10rem;
+            justify-content:center;
+            flex-direction:column;
+            background: #0099cc;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            width: 980px;
+            height: 30rem;
+            background: pink;
+            padding: 50px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 h1{
+            font-size: 1rem;
+            border: 1px dashed #FFF;
+            color: #FFF;
+            width: 300px;
+        }
+        .box4{
+            display: table-cell;
+            vertical-align: middle;
+            width: 980px;
+            background: cadetblue;
+            color: #ffffff;
+            height: 100px;
+        }
+        .box4 span{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>父级div固定高度，单行文本垂直居中</h1>
+<div class="box3">
+    fda解放军看风景飞机扩大解放咯是jfk附近的卡金卡放假咯酒
+</div>
+<h1>父级div固定高度，多行文本垂直居中</h1>
+<h2>方法一</h2>
+<div class="box">
+    fda解放军看风景飞机扩大解放咯是jfk附近的卡金卡放假咯酒
+    fda解放军看风景飞机扩大解放咯是jfk附近的卡金卡放假咯酒fda解放军看风景飞机扩大解放咯是jfk附近的卡金卡放假咯酒
+</div>
+<h2>方法二</h2>
+<div class="box1">
+    <h1>flex弹性布局justify-content属性实现元素垂直居中</h1>
+    <h1>flex弹性布局justify-content属性实现元素垂直居中</h1>
+    <h1>flex弹性布局justify-content属性实现元素垂直居中</h1>
+    <h1>flex弹性布局justify-content属性实现元素垂直居中</h1>
+</div>
+<h2>方法三</h2>
+<div class="box4">
+    <span>1.实现关键把文字当做图片来处理。用一个span标签把所有文字封装起来，
+        设置文字和图片相同属性display：inline-block。然后用处理图片垂直居中的方式来处理文字
+        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+    </span>
+</div>
+<style>
+    .center span{
+        float: left;
+        border:1px solid #fff;
+        padding:5px 10px;
+        margin:10px;
+        color:#fff;
+    }
+    #vc { display:table; background-color:#C2300B; width:980px; height:200px;  }
+    #vci { vertical-align:middle; display:table-cell; text-align:center; width:980px;}
+    #content { color:#fff; border:1px solid #fff; display:inline-block; _position:relative; _top:-50%; _left:-50%; }
+
+
+</style>
+<div id="vc">
+    <div id="vci">
+        testtesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiudsadadadadadaddtesttesttesttesttestfjdk
+        testtesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiudsadadadadadaddtesttesttesttesttestfjdk
+        testtesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiu
+        testtesttesttestt
+        testtesttesttestt
+        <div id="content">
+          testtesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiutesttesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiutesttesttesttesttestfjdksafkfjkjfksjfkjfkjkfuweiu
+        </div>
+    </div>
+</div>
+</body>
+</html>

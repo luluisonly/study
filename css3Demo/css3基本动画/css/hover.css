@@ -1,0 +1,508 @@
+.demo{
+    display: inline-block;
+    width: 24%;
+    padding: 10px;
+    box-sizing:padding-box;
+    -moz-box-sizing:padding-box;
+    border: 1px solid pink;
+}
+.demo textarea{
+    box-sizing:padding-box;
+    font-size: 0.9em;
+    height: 32px;
+    padding: 6px 0px;
+    width: 100%;
+    text-align: center;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+img{
+    border: none;
+}
+.effects{
+    margin: 3em 15em;
+}
+
+@media only screen and (max-width: 959px) {
+    .demo {
+        width: 32.5%;
+    }
+}
+@media only screen and (max-width: 659px) {
+    .demo {
+        width: 49%;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .demo {
+        width: 100%;
+    }
+}
+/*/////////////////////////////////////////////////////////*/
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    max-width: 100%;
+    background-color: rgba(1, 87, 155, 0.75);
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+[class^='imghvr-'] img,
+[class*='imghvr-'] img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+[class^='imghvr-'] figcaption,
+[class*='imghvr-'] figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: inherit;
+    padding: 30px;
+}
+
+[class^='imghvr-'] h3,
+[class*='imghvr'] h3,
+[class^='imghvr-'] p,
+[class*='imghvr'] p{
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+[class^='imghvr-'],
+[class*=' imghvr-'],
+[class^='imghvr-']:before,
+[class^='imghvr-']:after,
+[class*=' imghvr-']:before,
+[class*=' imghvr-']:after,
+[class^='imghvr-'] *,
+[class*=' imghvr-'] *,
+[class^='imghvr-'] *:before,
+[class^='imghvr-'] *:after,
+[class*=' imghvr-'] *:before,
+[class*=' imghvr-'] *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+[class^='demo'] > figure,
+[class*='demo'] > figure{
+    animation: firstAnimate 0.5s ease-in-out;
+    -webkit-animation: firstAnimate 0.5s ease-in-out;
+}
+@keyframes  firstAnimate{
+    0%{
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes firstAnimate {
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+ }
+
+/*imghvr-fade*/
+.imghvr-fade figcaption{
+    opacity: 0;
+}
+.imghvr-fade:hover > img{
+    opacity: 0;
+}
+.imghvr-fade:hover figcaption{
+    opacity: 1;
+}
+
+/*imghvr-push-up*/
+.imghvr-push-up figcaption{
+    transform: translateY(100%);
+}
+.imghvr-push-up:hover > img {
+    transform: translateY(-100%);
+    -webkit-transform:translateY(-100%)
+}
+.imghvr-push-up:hover > figcaption{
+    transform: translateY(0%);
+}
+/*imghvr-push-down*/
+.imghvr-push-down figcaption {
+    transform:translateY(-100%);
+    opacity: 1;
+}
+.imghvr-push-down:hover > img {
+    transform:translateY(100%)
+}
+.imghvr-push-down:hover > figcaption{
+    transform:translateY(0%);
+}
+
+/*imghvr-push-left*/
+
+.imghvr-push-left figcaption{
+    transform: translateX(-100%);
+}
+.imghvr-push-left:hover > img{
+    transform: translateX(100%);
+}
+.imghvr-push-left:hover > figcaption {
+    transform: translateX(0%)
+}
+
+/*imghvr-push-right*/
+
+.imghvr-push-right figcaption {
+    transform:translateX(100%)
+}
+.imghvr-push-right:hover > img{
+    transform:translateX(-100%)
+}
+.imghvr-push-right:hover >figcaption{
+    transform:translateX(0%)
+}
+/*imghvr-slide-up*/
+[class ^= 'imghvr-slide-']:hover figcaption,
+[class *= 'imghvr-slide-']:hover figcaption{
+    transform:translate(0%,0%);
+    opacity: 0.8;
+}
+.imghvr-slide-up figcaption{
+    transform: translateY(100%);
+    opacity: 0.8;
+}
+.imghvr-slide-down figcaption{
+    transform: translateY(-100%);
+    opacity: 0.8;
+}
+
+.imghvr-slide-left figcaption{
+    transform:translateX(-100%);
+    opacity: 0.8;
+}
+
+.imghvr-slide-right figcaption{
+    transform:translateX(100%);
+    opacity: 0.8;
+}
+
+
+/*imghvr-reveal*/
+[class^='imghvr-reveal-']:before,
+[class*='imghvr-reveal-']:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    top: 0;
+    background:inherit;
+}
+[class^='imghvr-reveal-'] figcaption,
+[class*='imghvr-reveal-'] figcaption{
+    opacity: 0;
+}
+[class^='imghvr-reveal-']:hover figcaption,
+[class*='imghvr-reveal-']:hover figcaption {
+    opacity: 1;
+    transition-delay: 0.35s;
+    -webkit-transition-delay:0.35s;
+}
+[class^='imghvr-reveal-']:hover:before,
+[class*='imghvr-reveal-']:hover:before{
+    transform:translate(0,0);
+}
+.imghvr-reveal-up:before{
+    transform: translateY(100%);
+}
+
+.imghvr-reveal-down:before{
+    transform:translateY(-100%);
+}
+
+.imghvr-reveal-left:before{
+    transform:translateX(-100%);
+}
+
+.imghvr-reveal-right:before{
+    transform:translateX(100%);
+}
+
+/*imghvr-hinge*/
+[class^='imghvr-hinge-'],
+[class*='imghvr-hinge-']{
+    perspective: 50em;
+    -webkit-perspective: 50em;
+}
+
+[class^='imghvr-hinge-']:hover img,
+[class*='imghvr-hinge-']:hover img{
+    opacity: 0;
+    transform: rotate(0deg);
+}
+[class^='imghvr-hinge-'] figcaption,
+[class*='imghvr-hinge-'] figcaption{
+    opacity: 0;
+}
+[class^='imghvr-hinge-']:hover figcaption,
+[class*='imghvr-hinge-']:hover figcaption{
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+/*hinge-up*/
+.imghvr-hinge-up img {
+    transform-origin: 50% top ;
+}
+
+.imghvr-hinge-up figcaption{
+    transform: rotateX(90deg);
+    transform-origin: 50% bottom;
+    z-index: 1;
+}
+.imghvr-hinge-up:hover figcaption{
+    transform: rotateX(0deg);
+}
+
+.imghvr-hinge-up:hover > img {
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+/*hinge-down*/
+.imghvr-hinge-down img{
+    transform-origin: 50% 100%;
+}
+.imghvr-hinge-down:hover img{
+    transform: rotateX(90deg);
+}
+.imghvr-hinge-down figcaption{
+    transform-origin: 50% 0%;
+    transform: rotateX(-90deg);
+}
+
+/*hinge-left*/
+.imghvr-hinge-left img{
+    transform-origin:0% 50%;
+}
+.imghvr-hinge-left:hover img{
+    transform: rotateY(90deg);
+}
+.imghvr-hinge-left figcaption{
+    transform-origin:100% 50% ;
+    transform: rotateY(-90deg);
+}
+
+/*hinge-right*/
+.imghvr-hinge-right img{
+    transform-origin:100% 50%;
+}
+.imghvr-hinge-right:hover img{
+    transform: rotateY(-90deg);
+}
+.imghvr-hinge-right figcaption{
+    transform-origin: 0% 50%;
+    transform: rotateY(90deg);
+}
+
+
+/*filp*/
+[class^='imghvr-flip-'],
+[class*='imghvr-flip-']{
+    perspective: 50em;
+}
+[class^='imghvr-flip-'] img,
+[class*='imghvr-flip-'] img,
+[class^='imghvr-flip-'] figcaption,
+[class*='imghvr-flip-'] figcaption{
+    backface-visibility:hidden;
+}
+[class^='imghvr-flip-']:hover img,
+[class*='imghvr-flip-']:hover img{
+    opacity: 0;
+}
+[class^='imghvr-flip-'] figcaption,
+[class*='imghvr-flip-'] figcaption{
+    opacity: 0;
+}
+[class^='imghvr-flip-']:hover figcaption,
+[class*='imghvr-flip-']:hover figcaption{
+    opacity: 1;
+    transition-delay: 0.2s;
+    transform: rotate(0deg);
+}
+/*imghvr-flip-horiz*/
+.imghvr-flip-horiz img{
+    transform-origin:50% 50%
+}
+.imghvr-flip-horiz:hover img{
+    transform: rotateX(-90deg);
+}
+
+.imghvr-flip-horiz figcaption{
+    transform-origin:0% 50%;
+    transform: rotateX(-90deg);
+}
+.imghvr-flip-horiz:hover figcaption{
+    transform: rotateX(0deg);
+}
+
+/*imghvr-flip-vert*/
+.imghvr-flip-vert img{
+    transform-origin:50% 50%
+}
+.imghvr-flip-vert:hover img{
+    transform: rotateY(-90deg);
+}
+.imghvr-flip-vert figcaption{
+    transform-origin:50% 50%;
+    transform: rotateY(90deg);
+}
+
+/*imghvr-flip-diag-1*/
+.imghvr-flip-diag-1 figcaption {
+    -webkit-transform: rotate3d(1, -1, 0, 100deg);
+    transform: rotate3d(1, -1, 0, 100deg);
+}
+
+.imghvr-flip-diag-1:hover > img {
+    -webkit-transform: rotate3d(-1, 1, 0, 100deg);
+    transform: rotate3d(-1, 1, 0, 100deg);
+}
+.imghvr-flip-diag-1:hover figcaption {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+/*imghvr-flip-diag-2*/
+.imghvr-flip-diag-2 figcaption {
+    -webkit-transform: rotate3d(1, 1, 0, 100deg);
+    transform: rotate3d(1, 1, 0, 100deg);
+}
+.imghvr-flip-diag-2:hover > img {
+    -webkit-transform: rotate3d(-1, -1, 0, 100deg);
+    transform: rotate3d(-1, -1, 0, 100deg);
+}
+.imghvr-flip-diag-2:hover figcaption {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+
+/*imghvr-shutter*/
+[class^='imghvr-shutter-out-']:before,
+[class*='imghvr-shutter-out-']:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+}
+[class^='imghvr-shutter-out-'] figcaption,
+[class*='imghvr-shutter-out-'] figcaption{
+    opacity: 0;
+}
+[class^='imghvr-shutter-out-']:hover figcaption,
+[class*='imghvr-shutter-out-']:hover figcaption{
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+/*imghvr-shutter-out-horiz*/
+.imghvr-shutter-out-horiz:before{
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    top: 0;
+}
+.imghvr-shutter-out-horiz:hover:before{
+    left: 0;
+    right: 0;
+}
+
+
+/*imghvr-shutter-out-vert*/
+.imghvr-shutter-out-vert:before{
+    left: 0;
+    right: 0;
+    bottom:50%;
+    top: 50%;
+}
+.imghvr-shutter-out-vert:hover:before{
+    bottom: 0;
+    top: 0;
+}
+.imghvr-shutter-out-vert figcaption{
+    opacity: 0;
+}
+.imghvr-shutter-out-vert:hover figcaption{
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+/*imghvr-shutter-out-diag-1*/
+.imghvr-shutter-out-diag-1:before{
+    top: 50%;
+    bottom: 50%;
+    left: -35%;
+    right: -35%;
+   transform: rotate(45deg);
+}
+.imghvr-shutter-out-diag-1:hover:before{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+/*imghvr-shutter-out-diag-1*/
+.imghvr-shutter-out-diag-2:before{
+    top: -35%;
+    bottom: -35%;
+    left: 50%;
+    right: 50%;
+    transform: rotate(45deg);
+}
+.imghvr-shutter-out-diag-2:hover:before{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+/*imghvr-shutter-in*/
+[class^='imghvr-shutter-in-']:before,
+[class*='imghvr-shutter-in-']:before,
+[class^='imghvr-shutter-in-']:after,
+[class*='imghvr-shutter-in-']:after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    background:red ;
+}
+/*imghvr-shutter-in*/
+.imghvr-shutter-in-horiz:before{
+    left: 0;
+    width: 0%;
+    background: red;
+    content: 'before';
+}
+.imghvr-shutter-in-horiz:after{
+    background: #000000;
+    width: 0%;
+    content: 'after';
+}
+.imghvr-shutter-in-horiz:hover:before,
+.imghvr-shutter-in-horiz:hover:after{
+    width: 100%;
+    border: 1px solid;
+}

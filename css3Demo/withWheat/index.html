@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>原麦山丘</title>
+    <link rel="stylesheet" href="js/jquery.fullpage.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="section one">
+        <section class="page">
+            <div class="logo">
+                <img src="images/logo.png" height="43%" width="13%"/>
+            </div>
+            <div class="head-left">
+                <div class="phone_img"> </div>
+            </div>
+            <div class="head-right">
+                <div class="slogan_img "></div>
+                <div class="qcode_img  "></div>
+                <div class="logo_title"></div>
+            </div>
+        </section>
+    </div>
+    <div class="section two normal">
+        <section class="page ">
+            <div class="head-left">
+                <div class="bage_img"></div>
+               <!-- <img class="leftimg" src="images/bage.png" height="80%" width="80%"/>-->
+            </div>
+            <div class="head-right">
+                <div class="text1"></div>
+              <!--<img class="rightimg" src="images/text1.png" height="57%" width="30%"/>-->
+            </div>
+        </section>
+    </div>
+    <div class="section three normal">
+        <section class="page ">
+            <div class="head-left">
+                <div class="text2"></div>
+               <!-- <img class="leftimg mt25 ml35" src="images/text2.png" height="64%" width="25%"/>-->
+            </div>
+            <div class="head-right ">
+                <div class="jifen"></div>
+               <!-- <img class="rightimg ml0" src="images/jifen.png" height="50%" width="80%"/>-->
+            </div>
+        </section>
+    </div>
+    <div class="section four normal">
+        <section class="page ">
+            <div class="head-left">
+                <div class="zhuanxiang"></div>
+               <!-- <img class="leftimg" src="images/zhuanxiang.png" height="65%" width="100%"/>-->
+            </div>
+            <div class="head-right">
+                <div class="text3"></div>
+               <!-- <img class="rightimg" src="images/text3.png" height="57%" width="30%"/>-->
+            </div>
+        </section>
+    </div>
+    <div class="section five normal">
+        <section class="page">
+            <div class="head-left">
+                <div class="text4"></div>
+               <!-- <img class="leftimg mt25 ml35" src="images/text4.png" height="51%" width="30%"/>-->
+            </div>
+            <div class="head-right">
+                <div class="love_520"></div>
+
+               <!-- <img class="rightimg" style="margin-left: -10%" src="images/520.png" height="35%" width="100%"/>-->
+            </div>
+        </section>
+    </div>
+    <div class="section six normal">
+        <section class="page ">
+            <div class="head-left">
+                <div class="zhengai"></div>
+                <!--<img class="leftimg" src="images/zhengai.png" height="45%" width="80%"/>-->
+            </div>
+            <div class="head-right">
+                <div class="text5"></div>
+               <!-- <img class="rightimg" src="images/text5.png" height="88%" width="41%"/>-->
+            </div>
+        </section>
+    </div>
+    <div class="section seven">
+        <section class="page addr">
+           <div class="title">
+               <h2>8家门店</h2>
+           </div>
+            <div class="addr-list">
+                <div class="addr-list-item" >
+                    <h4>SOHO尚都店</h4>
+                    <p>北京市朝阳区东大桥路8号SOHO尚都北塔1层   010-57451708</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>望京店</h4>
+                    <p>北京市朝阳区阜通东大街6号院4号楼方恒购物中心一层 010-57039392</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>崇文门新世界店</h4>
+                    <p>北京市东城区崇文门外大街3-5新世界综合馆一层南测 010-57459793</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>五道口店</h4>
+                    <p>北京市海淀区成府路28号西街一号 010-57459792</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>丰联店</h4>
+                    <p>北京市朝阳区朝阳门外大街18号丰联广场1层  010-57039663</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>中关村店</h4>
+                    <p>北京市海淀区中关村大街15号区地面1层1-024（近津乐汇百货门口）010-57112847</p>
+                </div>
+
+                <div class="addr-list-item" >
+                    <h4>富力城店</h4>
+                    <p>北京市朝阳区东三环中路65号富力广场一层1-03（富力广场北侧，近东三环人行天桥下）010-57039267</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h4>西单君太店</h4>
+                    <p>北京市西城区西单北大街133号 君太百货2层  010-59474849</p>
+                </div>
+                <div class="addr-list-item" >
+                    <h2>招商电话</h2>
+                    <p style="font-weight: 600">15300136118&nbsp;&nbsp;&nbsp; 010-56217303</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#container').fullpage({
+            anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7']
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css tab 选项</title>
+    <style>
+        .flex{
+            display: flex;
+        }
+        .flex-item{
+            flex: 1;
+        }
+        .box{
+            border: 1px solid #CCC;
+            text-align: center;
+            position: relative;
+        }
+        .tab{
+            background: greenyellow;
+        }
+        .tab .tabRadio{
+            opacity: 0;
+            position: absolute;
+        }
+        .tab .tabLabel{
+            background: #DDDDDD;
+            display: block;
+            width: 100%;
+            height: 60px;
+            line-height: 50px;
+        }
+        .tab .tabContent {
+            display: none;
+            text-align: center;
+            width: 100%;
+            border: 1px solid red;
+            position: absolute;
+            margin-left: -1px;
+            left: 0;
+        }
+        .tab .tabRadio:checked ~ .tabContent{
+            display: block;
+        }
+        .tab .tabRadio:checked ~ .tabLabel{
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="box flex">
+    <div class="tab flex-item">
+        <input type="radio" name="tab" id="tabRadio1" class="tabRadio" checked="checked"/>
+        <label class="tabLabel" for="tabRadio1">选项卡1</label>
+        <div class="tabContent">
+            <h3>选项卡1内容项</h3>
+            <img src="http://placeKitten.com/200/201"/>
+        </div>
+    </div>
+    <div class="tab flex-item">
+        <input type="radio" name="tab" id="tabRadio2" class="tabRadio" />
+        <label class="tabLabel" for="tabRadio2">选项卡2</label>
+        <div class="tabContent">
+            <h3>选项卡2内容项</h3>
+            <img src="http://placeKitten.com/201/200"/>
+        </div>
+    </div>
+    <div class="tab flex-item">
+        <input type="radio" name="tab" id="tabRadio3" class="tabRadio" />
+        <label class="tabLabel" for="tabRadio3">选项卡3</label>
+        <div class="tabContent">
+            <h3>选项卡3内容项</h3>
+            <img src="http://placeKitten.com/201/202"/>
+        </div>
+    </div>
+    <div class="tab flex-item">
+        <input type="radio" name="tab" id="tabRadio4" class="tabRadio" />
+        <label class="tabLabel" for="tabRadio4">选项卡4</label>
+        <div class="tabContent">
+            <h3>选项卡4内容项</h3>
+            <img src="http://placeKitten.com/201/203"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

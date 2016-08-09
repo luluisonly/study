@@ -1,0 +1,309 @@
+
+@media screen and (max-width: 414px ) {
+    .logo img{
+        width: 35%;
+        height: 40%;
+        margin-left: 10px;
+        position: absolute;
+        bottom: 20px;
+    }
+    .section.one .page .head-left img{
+        height: 45%;
+        width: 105%;
+        right: -12%;
+    }
+    .section.one .page .head-right {
+        left: 2%;
+    }
+    .head-right .slogan{
+        height: 10%;
+        width: 65%;
+    }
+    .section.one .page .head-right img.qcode{
+        top: 30%;
+        width: 50%;
+        height: 15%;
+    }
+    .section.one .page .head-right p.text{
+        left: -15%;
+        top: 43%;
+        transform: scale(0.5);
+    }
+
+    .section.two .page .head-left .leftimg{
+        height: 50%;
+        margin-top: 80%;
+    }
+    .section.two .page .head-right .rightimg {
+        height: 40%;
+        width: 60%;
+        margin-top: 85%;
+    }
+    .section.three .page .head-left .leftimg{
+        height: 50%;
+        width: 45%;
+        margin-top: 75%;
+    }
+    .section.three .page .head-right .rightimg{
+        height: 25%;
+        width: 95%;
+        margin-top: 100%;
+    }
+
+    .section.four .page .head-left .leftimg{
+        height: 35%;
+        width: 148%;
+        margin-top: 85%;
+        margin-left: -10%;
+    }
+
+    .section.four .page .head-right .rightimg{
+        height: 37%;
+        width: 50%;
+        margin-top: 75%;
+    }
+
+    .section.five .page .head-left .leftimg{
+        height: 48%;
+        width: 54%;
+        margin-top: 85%;
+        margin-left: 15%;
+    }
+
+    .section.five .page .head-right .rightimg{
+        height: 30%;
+        width: 100%;
+        margin-top: 95%;
+    }
+
+    .section.six .page .head-left .leftimg{
+        height: 25%;
+        width: 100%;
+        margin-top: 100%;
+        margin-left: 8%;
+    }
+
+    .section.six .page .head-right .rightimg{
+        height: 70%;
+        width: 90%;
+        margin-top: 38%;
+        margin-left: 18%;
+    }
+
+}
+@media screen and (max-width: 375px ) {
+    .section.one .page .head-right p.text{
+        left: -28%;
+        top: 42%;
+        transform: scale(0.4);
+    }
+    .section.normal .page .head-left{
+        width: 48%;
+    }
+
+    .section.two .page .head-left .leftimg{
+        height: 50%;
+        margin-top: 80%;
+    }
+    .section.two .page .head-right .rightimg {
+        height: 40%;
+        width: 60%;
+        margin-top: 85%;
+    }
+    .section.three .page .head-left .leftimg{
+        height: 50%;
+        width: 45%;
+        margin-top: 75%;
+    }
+    .section.three .page .head-right .rightimg{
+        height: 25%;
+        width: 95%;
+        margin-top: 100%;
+    }
+
+    .section.four .page .head-left .leftimg{
+        height: 35%;
+        width: 148%;
+        margin-top: 85%;
+        margin-left: -10%;
+    }
+
+    .section.four .page .head-right .rightimg{
+        height: 37%;
+        width: 50%;
+        margin-top: 75%;
+    }
+
+    .section.five .page .head-left .leftimg{
+        height: 48%;
+        width: 54%;
+        margin-top: 85%;
+        margin-left: 15%;
+    }
+
+    .section.five .page .head-right .rightimg{
+        height: 30%;
+        width: 100%;
+        margin-top: 95%;
+    }
+
+    .section.six .page .head-left .leftimg{
+        height: 25%;
+        width: 100%;
+        margin-top: 100%;
+        margin-left: 8%;
+    }
+
+    .section.six .page .head-right .rightimg{
+        height: 70%;
+        width: 90%;
+        margin-top: 38%;
+        margin-left: 18%;
+    }
+
+}
+@media screen  and (max-width: 380px){
+    .section.one .page .head-right{
+        width: 48%;
+    }
+    .section.one .page .head-right p.text{
+        left: -24%;
+        top: 42%;
+        transform: scale(0.4);
+    }
+}
+@media screen  and (max-width: 320px) {
+
+    .section.one .page .head-right p.text {
+        left: -28%;
+    }
+    .section.normal .page .head-left{
+        width: 48%;
+    }
+    .section.two .page .head-left .leftimg{
+        height: 50%;
+        margin-top: 80%;
+    }
+    .section.two .page .head-right .rightimg {
+        height: 40%;
+        width: 60%;
+        margin-top: 85%;
+    }
+    .section.three .page .head-left .leftimg{
+        height: 50%;
+        width: 45%;
+        margin-top: 75%;
+    }
+    .section.three .page .head-right .rightimg{
+        height: 25%;
+        width: 95%;
+        margin-top: 100%;
+    }
+
+    .section.four .page .head-left .leftimg{
+        height: 35%;
+        width: 148%;
+        margin-top: 85%;
+        margin-left: -10%;
+    }
+
+    .section.four .page .head-right .rightimg{
+        height: 37%;
+        width: 50%;
+        margin-top: 75%;
+    }
+
+    .section.five .page .head-left .leftimg{
+        height: 48%;
+        width: 54%;
+        margin-top: 85%;
+        margin-left: 15%;
+    }
+
+    .section.five .page .head-right .rightimg{
+        height: 30%;
+        width: 100%;
+        margin-top: 95%;
+    }
+
+    .section.six .page .head-left .leftimg{
+        height: 25%;
+        width: 100%;
+        margin-top: 100%;
+        margin-left: 8%;
+    }
+
+    .section.six .page .head-right .rightimg{
+        height: 70%;
+        width: 90%;
+        margin-top: 38%;
+        margin-left: 18%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .section.seven .addr {
+        margin: 10px;
+        font-size: 0.625rem;
+    }
+    .addr-list-item{
+        height: 55px;
+    }
+    .addr-list-item:nth-child(2n-1) {
+        width: 100%;
+    }
+    .section.one {
+        background: url("../images/bg.jpg") no-repeat;
+        background-size: cover;
+    }
+    .phone_img{
+        background: url("../images/phone_2.png") no-repeat 100% 35%;
+        background-size: 85%;
+
+    }
+    .qcode_img{
+        height: 10%;
+    }
+    .bage_img{
+        background: url("../images/bage2.png") no-repeat 100% 50%;
+        background-size: 95%;
+    }
+
+    .text1{
+        background-size: 55%;
+    }
+    .text2{
+        background-size: 50%;
+    }
+    .text3{
+        background-size: 55%;
+    }
+    .text4{
+        background-size: 50%;
+    }
+    .text5{
+        background-size: 70%;
+    }
+
+    .jifen{
+        background: url("../images/jifen2.png") no-repeat 100% 50%;
+        background-size: 85%;
+    }
+
+    .love_520{
+        background: url("../images/520_2.png") no-repeat 100% 50%;
+        background-size: 99%;
+    }
+    .zhuanxiang{
+        background: url("../images/zhuanxiang2.png") no-repeat 50% 50%;
+        background-size: 98%;
+    }
+
+    .zhengai{
+        background: url("../images/zhengai2.png") no-repeat 50% 50%;
+        background-size: 88%;
+    }
+
+}
+

@@ -1,0 +1,279 @@
+html{
+    font-size: 100%;
+}
+h2{
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+}
+
+#container .section {
+    text-align:center;
+    height: 100%;
+    width: 100%;
+}
+#container .section:nth-child(2n){
+    background: #e7e1d1;
+}
+.section .page {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section.one{
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+}
+.section.one .page .logo{
+    height: 16%;
+    text-align: left;
+    position: relative;
+}
+.section.one .page .logo img{
+    position: absolute;
+    bottom: 5px;
+}
+.section.one .page .head-left{
+    width: 49%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+
+}
+.section.one .page .head-left img{
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+}
+.section.one .page .head-right {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+.section.one .page .head-right img{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 4%;
+}
+.section.one .page .head-right img.qcode{
+    top: 43%;
+    left: 6%;
+}
+.section.one .page .head-right p.text{
+    position: absolute;
+    color: #FFF;
+    height: 30px;
+    line-height: 15px;
+    top: 20%;
+    left: 6%;
+    font-size: 18px;
+}
+.icon-weChat{
+    background: url("../images/weChat.png") no-repeat ;
+    background-size: 100%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+
+
+.section.normal .page{
+    position: relative;
+}
+
+.section.normal .page .head-left{
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    text-align: right;
+}
+.section.normal .page .head-right{
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    text-align: left;
+}
+.section.normal .page .head-left .leftimg{
+    display: block;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.section.normal .page .head-left .ml35{
+    margin-left: 35%;
+}
+.section.normal .page .head-left .mt25{
+    margin-top: 25%;
+}
+.section.normal .page .head-right .rightimg{
+    display: block;
+    margin-left: 30%;
+    margin-top: 30%;
+}
+.section.normal .page .head-right .ml0{
+    margin-left: 0%;
+}
+
+.section.four .page .head-left .leftimg{
+    margin-top: 25%;
+    margin-left: 0%;
+}
+
+.section.six .page .head-left .leftimg {
+    display: block;
+    margin-top: 25%;
+    margin-left: 11%;
+}
+
+.section.six .page .head-right .rightimg {
+    margin-top: 10%;
+}
+.section.seven {
+    width: 100%;
+    background: url("../images/footer.png") no-repeat 100% 100%;
+    background-size: contain;
+}
+.section.seven .addr{
+    text-align: left;
+    color: #a38057;
+    font-family: '微软雅黑';
+    font-size:1rem;
+    margin-top: 50px;
+
+}
+.section.seven .addr h4{
+    height: 8px;
+}
+.addr-list{
+    display: box;			  /* OLD - Android 4.4- */
+    display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;	 /* NEW - Chrome */
+    display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -webkit-box-orient:vertical;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+
+    /* 09版 */
+    -webkit-box-lines: multiple;
+    /* 12版 */
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    text-align: left;
+}
+.addr-list-item:nth-child(2n-1){
+   width: 45%;
+}
+
+.phone_img{
+    background: url("../images/phone.png") no-repeat 100% 90%;
+    width: 100%;
+    height: 70%;
+    background-size: 68%;
+}
+
+.slogan_img{
+    background: url("../images/slogan.png") no-repeat 100% 100%;
+    height: 23%;
+    width: 45%;
+    background-size: 70%;
+}
+
+.qcode_img{
+    background: url("../images/qcode.png") no-repeat 100% 0%;
+    height: 25%;
+    width: 45%;
+    background-size: 60%;
+    margin-top: 10% ;
+}
+
+.logo_title{
+    background: url("../images/title.png") no-repeat 100% 40%;
+    height: 8%;
+    width: 45%;
+    background-size: 60%;
+}
+
+.bage_img{
+    background: url("../images/bage.png") no-repeat 100% 50%;
+    height: 100%;
+    width: 100%;
+    background-size: 60%;
+}
+
+.text1{
+    background: url("../images/text1.png") no-repeat 30% 50%;
+    background-size: 30%;
+    height: 100%;
+    width: 100%;
+}
+
+.text2{
+    background: url("../images/text2.png") no-repeat 50% 50%;
+    background-size: 25%;
+    height: 100%;
+    width: 100%;
+}
+.jifen{
+    background: url("../images/jifen.png") no-repeat 50% 50%;
+    background-size: 60%;
+    height: 100%;
+    width: 100%;
+}
+
+.zhuanxiang{
+    background: url("../images/zhuanxiang.png") no-repeat 50% 50%;
+    background-size: 60%;
+    height: 100%;
+    width: 100%;
+}
+
+.text3{
+    background: url("../images/text3.png") no-repeat 50% 50%;
+    background-size: 25%;
+    height: 100%;
+    width: 100%;
+}
+
+.love_520{
+    background: url("../images/520.png") no-repeat 50% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+}
+.text4{
+    background: url("../images/text4.png") no-repeat 50% 50%;
+    background-size: 25%;
+    height: 100%;
+    width: 100%;
+}
+
+.zhengai{
+    background: url("../images/zhengai.png") no-repeat 50% 50%;
+    background-size: 60%;
+    height: 100%;
+    width: 100%;
+}
+
+.text5{
+    background: url("../images/text5.png") no-repeat 50% 50%;
+    background-size: 35%;
+    height: 100%;
+    width: 100%;
+}

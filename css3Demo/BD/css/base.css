@@ -1,0 +1,128 @@
+html{
+    font-size:100%;
+}
+
+html,body{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,pre,p,fieldset,legend,form,input,button,textarea,th,td{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    font-family: 'Microsoft yahei', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:87.5%;
+    line-height: 1.428571429;
+    color: #444;
+}
+
+/* general body settings */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a:focus,
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+    outline: 0;
+}
+
+*, *:after, *:before{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: " ";
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus{
+    text-decoration:none;
+}
+
+fieldset, img {
+    border:0;
+}
+
+input, button, select, label, img{
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+i, cite, em {
+    font-style:normal;
+}
+
+label {
+    font-weight: 400;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+textarea{
+    overflow: auto;
+    resize: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.container{
+    width: 100%;
+    /*overflow-y: scroll;*/
+}
+.container img{
+    width: 100%;
+    height: auto;
+}
+.buyNow{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    background: #af8f69;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 3px;
+}

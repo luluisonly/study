@@ -1,0 +1,80 @@
+.wrap{
+    width:100%;
+    font-family: "微软雅黑", Helvetica, Tahoma, Arial, sans-serif;
+    font-size:14px;
+    background: #ffffff;
+}
+
+#scroller{
+    width:100%;
+    position:relative;
+}
+
+#scroller .word{
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-align: center;
+    line-height:22px;
+}
+.word img{
+    width:100%;
+}
+
+.word .r1{
+    font-weight: bold;
+    color: #a31c1c;
+}
+
+.b1{
+    font-weight: bold;
+    color: #444444;
+}
+
+.word .g1{
+    color: #444444;
+}
+
+#scroller .con{
+    width:94%;
+    padding: 0 3%;
+    text-align: center;
+}
+
+.con .contain{
+    width:100%;
+    line-height:40px;
+    padding-bottom:10px;
+}
+
+.y1{
+    color:#ad8f69;
+    font-weight: bold;
+}
+
+.contain img{
+    width:100%;
+}
+
+.group{
+    width: 100%;
+    padding: 20px 0%;
+    line-height: 20px;
+    border-bottom: 1px dashed #8d8c8c;
+}
+
+.group img{
+    width:100%;
+}
+
+.scan{
+    text-align: center;
+    padding-bottom:20px;
+    margin-left:25%;
+    width:50%;
+}
+.scan img{
+    width:100%;
+}
+
+

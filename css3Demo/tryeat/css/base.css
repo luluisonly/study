@@ -1,0 +1,203 @@
+html{
+    font-size:100%;
+}
+
+html,body{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,pre,p,fieldset,legend,form,input,button,textarea,th,td{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    font-family: 'Microsoft yahei', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:87.5%;
+    line-height: 1.428571429;
+    color: #444;
+    background: #f9f5f3;
+}
+
+/* general body settings */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a:focus,
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+    outline: 0;
+}
+
+*, *:after, *:before{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: " ";
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus{
+    text-decoration:none;
+}
+
+fieldset, img {
+    border:0;
+}
+
+input, button, select, label, img{
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+i, cite, em {
+    font-style:normal;
+}
+
+label {
+    font-weight: 400;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+textarea{
+    overflow: auto;
+    resize: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+.btn{
+    height: 45px;
+    line-height: 45px;
+    border: 0;
+
+}
+.lg{
+    width: 100%;
+    font-weight: 600;
+}
+.gold{
+    background: #b1916a;
+    color: #ffffff;
+}
+.flex{
+    display: flex;
+}
+.flex > .flexItem{
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.page {
+    width: 100%;
+    height: auto;
+}
+.page .header{
+    position: relative;
+}
+.page .header img{
+    width: 85%;
+    height: auto;
+    margin-left: 15%;
+}
+
+.page .header img.logo{
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 15px;
+    width: 125px;
+    height: 44px;
+}
+.page .tip-text img{
+    width: 90%;
+    height: auto;
+    margin: 15% 5% 10% 5%;
+}
+.page .tryEatForm{
+    margin: 5%;
+    color: #bbbaba;
+    width: 90%;
+    font-size: 16px;
+}
+.page .tryEatForm .form-group{
+    height: 45px;
+    line-height: 2.5;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.page .tryEatForm .form-group label.form-label{
+    font-weight: 600;
+    display: inline-block;
+    width: 80px;
+    white-space: nowrap;
+}
+.page .tryEatForm .form-group .input-item{
+    width: 77%;
+}
+.page .tryEatForm .form-group input.form-input{
+    padding-left: 10px;
+    background: #e4e4e4;
+    height: auto;
+    border: 0;
+    width: 100%;
+}
+.page .tryEatForm .form-group .input-item select{
+    height: 40px;
+    color: #bbbaba;
+    background: #e4e4e4;
+    border: 0;
+    width: 100%;
+    padding-left: 5px;
+}
+.page .tryEatForm .form-group .input-item select:not(:last-child){
+    margin-right: 10px;
+}
+.page .tryEatForm .submit{
+    margin: 30px 0px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>flex 语法兼容</title>
+    <style>
+
+        ul li{
+            list-style-type: none ;
+        }
+
+        .page-wrap {
+            display: -webkit-box;  /*ios6 safari 3.1-6*/
+            display: -ms-flexbox; /*IE10*/
+            display: -moz-box; /*ff 19 */
+            display: -webkit-flex; /* new chrome*/
+            display: flex;
+
+            text-align: center;
+        }
+
+        .main-sidebar,
+        .main-nav {
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            width: 20%;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+
+            background: #cccccc;
+        }
+
+        .main-content {
+            -webkit-box-ordinal-group: 2;
+            -moz-box-ordinal-group: 2;
+            -ms-flex-order: 2;
+            -webkit-order: 2;
+            order: 2;
+
+            -webkit-box-flex: 3;
+            -moz-box-flex: 3;
+            width: 60%;
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+
+            background: palegoldenrod;
+        }
+        .main-nav {
+            -webkit-box-ordinal-group:1;
+            -moz-box-ordinal-group:1;
+            -ms-flex-order:1;
+            -webkit-order: 1;
+            order: 1;
+        }
+        .main-sidebar {
+            -webkit-box-ordinal-group:3;
+            -moz-box-ordinal-group:3;
+            -ms-flex-order:3;
+            -webkit-order:3;
+            order:3;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page-wrap ">
+    <section class="main-content" role="main">
+        <h2>main content</h2>
+        <div>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+        </div>
+
+    </section>
+    <nav class="main-nav" role="navigation">
+        <h2>nav title</h2>
+        <ul>
+            <li><a href="#">test1</a></li>
+            <li><a href="#">test2</a></li>
+            <li><a href="#">test3</a></li>
+            <li><a href="#">test4</a></li>
+        </ul>
+    </nav>
+    <aside class="main-sidebar" role="complementary">
+        <h2>Sidebar</h2>
+        <div>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+            <p>testteststestststetstst</p>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>

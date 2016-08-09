@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery 基本选择器使用</title>
+    <script src="jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<!-- HTML结构 -->
+<ul class="lang">
+    <li class="js dy">JavaScript</li>
+    <li class="dy">Python</li>
+    <li id="swift">Swift</li>
+    <li class="dy">Scheme</li>
+    <li name="haskell">Haskell</li>
+</ul>
+</body>
+<script>
+    $(function(){
+        var ul = $('ul.lang'); // 获得<ul>
+        var dy = ul.find('.dy'); // 获得JavaScript, Python, Scheme
+        var swf = ul.find('#swift'); // 获得Swift
+        var hsk = ul.find('[name=haskell]'); // 获得Haskell
+
+        var langs = $('ul.lang li'); // 拿到JavaScript, Python, Swift, Scheme和Haskell
+        var a = langs.filter('.dy'); // 拿到JavaScript, Python, Scheme
+
+        var langs = $('ul.lang li'); // 拿到JavaScript, Python, Swift, Scheme和Haskell
+        var arr = langs.map(function () {
+            return this.innerHTML;
+        }).get(); // 用get()拿到包含string的Array：['JavaScript', 'Python', 'Swift', 'Scheme', 'Haskell']
+    })
+</script>
+</html>

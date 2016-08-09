@@ -1,0 +1,97 @@
+.page{
+    background: #e1f3fc;
+    width: 100%;
+    height: 2500px;
+}
+.container{
+    max-width: 1000px;
+    width: 1000px;
+    border: 1px solid pink;
+    padding: 80px 0px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    zoom: 1;
+}
+.container [class^='cake-'],
+.container [class*='cake-']{
+    position: relative;
+    zoom: 1;
+}
+img{
+    display: block;
+    position: absolute;
+}
+[class^='cake-'] img,
+[class*='cake-'] img{
+    display: block;
+    position: absolute;
+}
+.container .cake-one{
+    position: relative;
+    height: 550px;
+    border: 1px solid blueviolet;
+}
+.cake-one img.reward-show{
+    left: 60px;
+}
+.cake-one img.envelope{
+    right: -50px;
+}
+.cake-one img.text1{
+    top: 250px;
+    left: 150px;
+}
+
+.container .cake-two{
+    position: relative;
+    border: 1px solid red;
+    height: 550px;
+}
+
+.cake-two .title1{
+    left: 50px;
+    top: 46%;
+}
+.cake-two .flow-cake1{
+    top: -90px;
+    right: -90px;
+}
+
+.container .cake-three{
+    position: relative;
+    border: 1px solid greenyellow;
+    height: 550px;
+}
+
+.cake-three .title2{
+    right: -20px;
+    top: 70px;
+}
+
+.cake-three .flow-cake2{
+    left: -10px;
+    top: -100px;
+}
+
+.container .cake-four{
+    position: relative;
+    border: 1px solid goldenrod;
+    height: 600px;
+}
+
+.cake-four .title3{
+    left: 50px;
+}
+
+.cake-four .litter-cake{
+    left: 50px;
+    top:100px;
+    height: 150px;
+    width: 200px;
+}
+
+.cake-four .tea{
+    right: -20px;
+    top:-90px;
+}

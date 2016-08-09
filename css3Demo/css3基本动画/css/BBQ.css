@@ -1,0 +1,160 @@
+/*BBQ烤肉*/
+:before, :after {
+    content: '';
+}
+
+.BBQ {
+    border-radius: 50%/20% 70%;
+    width: 40px;
+    height: 40px;
+    margin: 220px auto;
+    background: #333;
+    box-shadow: 40px 48px 0 #333,
+    -40px 48px 0 #333,
+    -23px -48px 0 #333,
+    15px -48px 0 #333,
+    45px -18px 0 #333,
+    -65px -28px 0 #333,
+    -75px 18px 0 #333,
+    -1px 71px 0 #333,
+    -16px 20px 0 120px #c33,
+    -16px 20px 0 140px #333;
+    position: relative;
+}
+
+.BBQ:before, .BBQ:after {
+    position: absolute;
+    background: #999;
+    width: 5px;
+    height: 350px;
+    top: -133px;
+    box-shadow: 15px 0 0 #999,
+    30px 0 0 #999,
+    45px 0 0 #999,
+    60px 0 0 #999,
+    75px 0 0 #999,
+    90px 0 0 #999,
+    105px 0 0 #999,
+    120px 0 0 #999,
+    135px 0 0 #999,
+    150px 0 0 #999,
+    -15px 0 0 #999,
+    -30px 0 0 #999,
+    -45px 0 0 #999,
+    -60px 0 0 #999,
+    -75px 0 0 #999,
+    -90px 0 0 #999,
+    -105px 0 0 #999,
+    -120px 0 0 #999,
+    -135px 0 0 #999,
+    -150px 0 0 #999;
+}
+
+.BBQ:after {
+    transform: rotate(90deg);
+    left: 10px;
+}
+
+.BBQ .meat {
+    width: 80px;
+    height: 87px;
+    background: #B45227;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50% 70% 25% 50%;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3) inset, 0 0 15px rgba(33, 33, 33, 0.3);
+    left: 49px;
+    top: 64px;
+}
+
+.BBQ .meat:before{
+    width: 4px;
+    height: 50px;
+    background: #974926;
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 9px;
+    transform: rotate(45deg);
+    border-radius: 100%;
+    box-shadow: 13px 0 0 #974926 ,27px 0 0 #974926;
+}
+
+.BBQ .meat:after{
+    width: 4px;
+    height: 48px;
+    background: #974926;
+    position: absolute;
+    left: 45px;
+    top: 12px;
+    border-radius: 100%;
+    box-shadow: 13px 0 0 #974926 ,27px 0 0 #974926;
+    transform: rotate(135deg);
+}
+.BBQ .sausage {
+    position: absolute;
+    z-index: 5;
+    left: -65px;
+    top: 60px;
+    width: 22px;
+    height: 100px;
+    background: #aa0000;
+    border-radius:10px ;
+    box-shadow:-2px 5px 8px 4px #6a0000 inset,1px 1px 3px #000 ;
+}
+.BBQ .sausage:before{
+    position: absolute;
+    z-index: -1;
+    left: 10px;
+    top: 100px;
+    height: 35px;
+    width: 3px;
+    border-radius: 20%;
+    background: #efe3c7;
+}
+.BBQ .sausage:after{
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 15px;
+    height: 7px;
+    background: #8c0000;
+    border-radius: 0% 25% 25% 0%;
+    box-shadow: 0px 17px #8c0000 , 0px -17px #8c0000 ;
+}
+.BBQ .smoke{
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: myanimate 5s ease-in-out infinite;
+    width: 100px;
+    height: 60px;
+    background-image: radial-gradient(ellipse,rgba(140,0,0,1) 0% ,rgba(0,0,0,0) 50%);
+    z-index: 2;
+}
+.BBQ .smoke:before{
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    left: -20px;
+    animation: myanimate 5s ease-in-out infinite;
+    width: 100px;
+    height: 60px;
+    background-image: radial-gradient(ellipse,rgba(140,0,0,1) 0% ,rgba(0,0,0,0) 50%);
+    z-index: 1;
+}
+
+@keyframes myanimate {
+    0%{
+        transform: scale(0.2) translateY(0);
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(-100px);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>5.用flex做垂直居中</title>
+    <style>
+        h3 {
+            padding: 20px;
+            color: #0099cc;
+            background: #cccccc;
+        }
+        .flex-cont {
+            display: flex;
+            display: -webkit-flex;
+            display: -webkit-box;
+        }
+        .f-btn {
+            background: blue;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: 0px;
+        }
+        .flex-centerbox {
+           /* 子元素沿着侧轴居中（垂直居中）*/
+            -webkit-box-align:center;
+            -webkit-align-items: center;
+            align-items:center;
+           /* 子元素沿着主轴居中（水平居中）*/
+            justify-content:center;
+            -webkit-justify-content: center;
+            -webkit-box-pack: center;
+            margin: 20px;
+            background: pink;
+            padding: 80px;
+        }
+        .center-cont{
+            background: #cccccc;
+            padding: 10px;
+            height: 300px;
+            width: 100px;
+            text-align: center; /*子元素的文字水平居中*/
+            margin: 20px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h3>5.用flex做垂直居中(遗留问题 子元素的内容不能垂直居中)</h3>
+    <div class="flex-cont flex-centerbox">
+        <div class="center-cont">
+            <h2>title</h2>
+            <p>desc1</p>
+            <p>desc2</p>
+            <button class="f-btn">btn</button>
+        </div>
+    </div>
+    <div class="flex-cont flex-centerbox">
+        <div class="center-cont">
+            <h2>title</h2>
+            <p>desc1</p>
+            <p>desc2</p>
+            <button class="f-btn">btn</button>
+        </div>
+        <div class="center-cont">
+            <h2>title</h2>
+            <p>desc1</p>
+            <p>desc2</p>
+            <button class="f-btn">btn</button>
+        </div>
+    </div>
+</body>
+</html>

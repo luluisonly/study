@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用flex做垂直弹性布局</title>
+    <link rel="stylesheet" href="css/flex.css"/>
+    <style>
+        h3{
+            height: 36px;
+            line-height: 36px;
+            padding-left: 20px;
+            color: #0099cc;
+            margin: 20px 0px;
+        }
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+        .page{
+            height: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing:border-box;
+            border: 1px solid;
+        }
+        .flex-cont{
+            display: flex;
+            display: -webkit-flex;
+            display: -webkit-box;
+
+        }
+        .flex-ver {
+            flex-direction: column;
+            -webkit-flex-direction:column;
+            -webkit-box-direction:normal;
+            -webkit-box-orient: vertical;
+            width: 100%;
+            height: 100%;
+        }
+        .flex-item{
+            flex: 1;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            width: 0%;
+        }
+        .cont-box{
+            height: auto;
+            width: 100%;
+            background: #cccccc;
+            overflow: scroll;
+            -webkit-overflow-scrolling : touch;
+        }
+        .nav-box,.btn-box{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background:#FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+    <!--1.用flex做提示icon-->
+    <h3 style="margin:0">1.用flex做垂直弹性布局</h3>
+    <div class="page">
+        <div class="flex-cont flex-ver">
+            <div class="nav-box">
+                title
+            </div>
+            <div class="flex-item cont-box">
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                contentcontentcontentcontent
+            </div>
+            <div class="btn-box">
+                <button class="f-btn">btn</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

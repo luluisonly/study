@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ie6 下 absolute left 和 button bug问题</title>
+</head>
+<body>
+
+<!--IE6下的left定位错误  -->
+<div style="position:relative;border:1px solid orange;text-align:center;">
+    <a href="http://placeKitten.com/20/21"   title="小老头的blog">小老头</a>
+    <div style="position:absolute;top:0;left:0;background:#CCC;">cjky</div>
+</div>
+<!--IE6下的left定位错误-->
+<hr />
+<div style="position:relative;border:1px solid orange;text-align:right;">
+    <a href="http://placeKitten.com/20/21" title="小老头的blog">小老头</a>
+    <div style="position:absolute;top:0;left:0;background:#CCC;">cjky</div>
+</div>
+
+
+<!--解决方法1 zoom:1-->
+<hr />
+<div style="position:relative;border:1px solid orange;zoom:1;text-align:center;">
+    <a href="http://hi.baidu.com/cjky/" title="小老头的blog">小老头</a>
+    <div style="position:absolute;top:0;left:0;background:#CCC;">cjky</div>
+</div>
+<!--解决方法2 设置width-->
+<hr />
+<div style="position:relative;width:99%;border:1px solid orange;text-align:center;">
+    <a href="http://hi.baidu.com/cjky/" title="小老头的blog">小老头</a>
+    <div style="position:absolute;top:0;left:0;background:#CCC;">cjky</div>
+</div>
+
+</body>
+</html>

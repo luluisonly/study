@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>5.用flex制作搜索框</title>
+    <style>
+        h3 {
+            padding: 20px;
+            color: #0099cc;
+            background: #cccccc;
+        }
+        .flex-cont {
+            display: flex;
+            display: -webkit-flex;
+            display: -webkit-box;
+        }
+        .f-Search{
+            align-items: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+            margin: 20px ;
+        }
+        .input{
+            flex: 1;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            margin: 20px 5px;
+        }
+        .f-icon{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: blanchedalmond;
+        }
+        .input input{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>5.用flex制作搜索框</h3>
+    <div class="flex-cont f-Search ">
+        <span>Search</span>
+        <div class="input">
+            <input type="search"/>
+        </div>
+        <button class="btn">btn</button>
+    </div>
+
+    <div class="flex-cont f-Search">
+        <div class="input">
+            <input type="search"/>
+        </div>
+        <button class="btn">btn</button>
+    </div>
+
+    <div class="flex-cont f-Search ">
+        <i class="f-icon"></i>
+        <div class="input">
+            <input type="search"/>
+        </div>
+        <button class="btn">btn</button>
+    </div>
+
+</body>
+</html>

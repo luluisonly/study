@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css关系选择符</title>
+    <style>
+        .box{
+            background-color: #0099cc;
+            height: 200px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        .btn{
+            padding: 10px 20px;
+            border: 0px;
+            background: lightpink;
+            border-radius: 5px;
+        }
+       /* 方法1 */
+       /* .btn{
+            margin-left:30px
+        }
+       .btn:first-child{
+            margin-left: 0px;
+        }*/
+       /* 方法2 利用+ 选择器剔除相同class第一个作用 */
+        .btn + .btn{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+</div>
+
+</body>
+</html>

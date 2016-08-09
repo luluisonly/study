@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用flex做提示icon</title>
+    <link rel="stylesheet" href="css/flex.css"/>
+    <style>
+        .box-one h3{
+            height: 36px;
+            line-height: 36px;
+            padding-left: 20px;
+            color: #0099cc;
+            margin: 20px 0px;
+        }
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+        .f-icon{
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background: blue;
+            flex: none;
+        }
+        .flex-cont{
+            display: flex;
+            display: -webkit-flex;
+            display: -webkit-box;
+
+        }
+        .flex-item{
+            flex: 1;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            width: 0%;
+        }
+        .flex-info{
+            -webkit-box-align: start;
+            -webkit-align-items:flex-start;
+            align-items: flex-start;
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+            margin: 20px 0px;
+            padding: 20px;
+        }
+        .flex-info .f-icon{
+            margin: 0px 20px;
+        }
+        .flex-info-center{
+            -webkit-box-align: center;
+            -webkit-align:center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!--1.用flex做提示icon-->
+    <h3 style="margin:0">1.用flex做提示icon</h3>
+    <div class="flex-cont flex-info">
+        <i class="f-icon"></i>
+        <div class="flex-item s-word">
+            <p class="s-desc">Description,xxx</p>
+            <p class="s-desc">test,test,test,test,test,test,test，test.hitest,test,test,test,</p>
+        </div>
+    </div>
+    <div class="flex-cont flex-info flex-info-center">
+        <i class="f-icon"></i>
+        <div class="flex-item s-word">
+            <p class="s-desc">Description,xxx</p>
+            <p class="s-desc">test,test,test,test,test,test,test，test.hitest,test,test,test,</p>
+        </div>
+    </div>
+
+    <!-- 2.用flex做列表元素 -->
+    <h3 style="margin:0">2.用flex做列表元素</h3>
+    <ul>
+        <li>
+            <div class="flex-cont flex-simple">
+                <div class="s-img"></div>
+                <div class="flex-item s-word">
+                    <p class="s-tit">title</p>
+                    <p class="s-desc">description</p>
+                </div>
+                <i class="f-icon"></i>
+            </div>
+        </li>
+        <li>
+            <div class="flex-cont flex-simple">
+                <div class="s-img"></div>
+                <div class="flex-item s-word">
+                    <p class="s-tit">title</p>
+                </div>
+                <i class="f-icon"></i>
+            </div>
+        </li>
+        <li>
+            <div class="flex-cont flex-simple">
+                <div class="flex-item s-word">
+                    <p class="s-tit">title</p>
+                    <p class="s-desc">description</p>
+                </div>
+                <i class="f-icon"></i>
+            </div>
+        </li>
+    </ul>
+
+</body>
+</html>

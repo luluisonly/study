@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>企业试吃</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script src="../test/jquery-3.0.0.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div id="page" class="page">
+    <div class="header">
+        <img src="images/logo.png" class="logo">
+        <img src="images/girl.png"/>
+    </div>
+    <div class="tip-text">
+        <img src="images/tiptext.png"/>
+    </div>
+    <form class="tryEatForm" id="tryEatForm">
+        <div class="form-group flex">
+            <label class="form-label">公司名称:</label>
+            <div class="input-item flexItem">
+                <input id="companyName" class="form-input "  type="text" placeholder="请输入公司的全称" />
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label">公司地址:</label>
+            <div class="input-item flex">
+               <select id="province" class="province flexItem" >
+                   <option value="0">请选择</option>
+                   <option value="1">上海</option>
+                   <option value="2">北京</option>
+               </select>
+                <select id="city" class="city flexItem" >
+                    <option value="0">请选择</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <select id="area" class="area flexItem" >
+                    <option value="0">请选择</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label"></label>
+            <div class="input-item flexItem">
+                <select id="street" class="street " >
+                    <option value="0">请选择</option>
+                    <option value="1">一街道</option>
+                    <option value="2">二街道</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group flex">
+            <label class="form-label" >详细地址:</label>
+            <div class="input-item flexItem">
+                <input id="dtailAddr" class="form-input "  type="text" placeholder="请输入公司的详细地址" />
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label">公司人数:</label>
+            <div class="input-item flexItem">
+                <input id="companyNum" class="form-input "  type="text" placeholder="请输入公司的参与活动人数" />
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label">申&nbsp;&nbsp;请&nbsp;人:</label>
+            <div class="input-item flexItem">
+                <input id="applyPerson" class="form-input"  type="text" placeholder="请输入申请人的姓名" />
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label">办公电话:</label>
+            <div class="input-item flexItem">
+                <input id="tel" class="form-input"  type="text" placeholder="请输入申请人的办公室电话" />
+            </div>
+        </div>
+        <div class="form-group flex">
+            <label class="form-label">个人电话:</label>
+            <div class="input-item flexItem">
+                <input id="mobilePhone" class="form-input"  type="text" placeholder="请输入申请人的个人电话" />
+            </div>
+        </div>
+        <div class="submit">
+            <button class="btn gold lg" id="submit">立即申请</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

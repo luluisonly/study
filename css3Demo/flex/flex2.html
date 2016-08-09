@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用flex做列表元素</title>
+    <style>
+        h3{
+            height: 30px;
+            line-height:30px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #f2f2f2 ;
+        }
+        .font-cont{
+            display: flex;
+            display: -webkit-flex;
+            display: -webkit-box;
+        }
+        .flex-item{
+            flex: 1;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            width: 0%;
+        }
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+        .f-icon{
+            display: block;
+            height: 30px;
+            width: 30px;
+            background: bisque;
+            flex: none;/*子元素默认是可以伸缩的，所以需要用flex：none禁止缩放*/
+        }
+        .flex-simple{
+            /*定义子元素垂直居中*/
+            background: pink;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .s-img {
+            width: 150px;
+            height: 151px;
+        }
+        .s-img img{
+            display: block;
+            vertical-align: middle;
+        }
+        .s-tit{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .s-tit,.s-desc{
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+<h3>2、用flex做列表元素</h3>
+<ul>
+    <li>
+        <div class="font-cont flex-simple">
+            <div class="s-img">
+                <img src="http://placeKitten.com/150/151"/>
+            </div>
+            <div class="flex-item s-word">
+                <p class="s-tit">title</p>
+                <p class="s-desc">content</p>
+            </div>
+            <i class="f-icon"></i>
+        </div>
+    </li>
+    <li>
+        <div class="font-cont flex-simple">
+            <div class="s-img">
+                <img src="http://placeKitten.com/150/151"/>
+            </div>
+            <div class="flex-item s-word">
+                <p class="s-tit">title</p>
+                <p class="s-desc">content</p>
+            </div>
+            <i class="f-icon"></i>
+        </div>
+
+    </li>
+    <li>
+        <div class="font-cont flex-simple">
+            <div class="flex-item s-word">
+                <p class="s-tit">title</p>
+                <p class="s-desc">content</p>
+            </div>
+            <i class="f-icon"></i>
+        </div>
+
+    </li>
+</ul>
+</body>
+</html>

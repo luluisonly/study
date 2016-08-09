@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>伸缩项目堆栈伸缩行——align-content</title>
+    <style>
+        h3 {
+            height: 50px;
+            line-height: 50px;
+            background: cadetblue;
+            color: #FFFFFF;
+        }
+        .flex-cont{
+            height: 800px;
+            width: 800px;
+            padding: 5px;
+            background: #cccccc;
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            -webkit-flex-direction: row;
+            flex-direction: row;
+
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            -webkit-align-content: center;
+            -ms-flex-line-pack:center; /*当子元素在容器中换行时，如果要调整行与行之间的间距 需要用到 align-center*/
+            align-content: center;
+
+
+            align-items: flex-start; /*此时 align-items 不起作用*/
+
+        }
+
+        .flex-item {
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            -ms-flex:1;
+            flex: 1;
+            border: 1px solid;
+
+            height: 150px;
+            width: 200px;
+            color: #0099cc;
+            background: pink;
+          /*  margin: 20px;*/
+
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: inline-flex;
+
+            align-items:center;
+          /*  text-align: center;*/ /*不起作用*/
+            justify-content: center;
+
+        }
+
+    </style>
+</head>
+<body>
+<h3>9、伸缩项目堆栈伸缩行-align-content</h3>
+    <div class="flex-cont">
+        <div class="flex-item" style="order:1;flex: 2 300px">item1</div> <!--order决定子元素的排序 值越大越靠后-->
+        <div class="flex-item" style="order:1;flex: 1 200px">item2</div>
+        <div class="flex-item" style="order:1;flex: 2 100px">item3</div>
+      <!--<div class="flex-item" style="order:1">item4</div>-->
+       <!-- <div class="flex-item" style="order:1">item11</div>
+        <div class="flex-item" style="order:1">item22</div>
+        <div class="flex-item" style="order:1">item33</div>-->
+    </div>
+</body>
+</html>

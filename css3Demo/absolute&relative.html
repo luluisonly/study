@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绝对定位和相对定位</title>
+    <style>
+        .box{
+            padding:20px;
+            margin-bottom:10px;
+            background-color:#f0f3f9;
+        }
+        .abs{
+            position: absolute;
+        }
+        .pox{
+            background: pink;
+            height: 100px;
+        }
+        .pox span{
+            border: 1px solid;
+        }
+        .pox .float{
+            float: left;
+            color: #ffffff;
+            font-size: 26px;
+            width: 100px;
+        }
+        .pox .abs{
+            width: 100px;
+            font-size: 26px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="http://placeKitten.com/200/201"/>
+    <p>没有absolute</p>
+</div>
+<div class="box abs">
+    <img src="http://placeKitten.com/200/201"/>
+    <p>有absolute(absolute的inline-block化 1:包裹性)</p>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<div class="pox">
+    <span class="float">1212</span>
+</div>
+<br>
+<div class="pox">
+    <span class="abs">1212</span>
+</div>
+</body>
+</html>
