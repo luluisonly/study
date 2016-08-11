@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>css3美化表格</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            padding: 40px 100px;
+        }
+
+        .demo{
+            width: 600px;
+            margin: 40px auto;
+            font-family:'trebuchet MS', 'Lucida sans', Arial;
+            font-size: 14px;
+            color: #444;
+        }
+
+        /*表格默认设置*/
+        table{
+            *border-collaspse:collapse; /*IE7 and lower*/
+            border-spacing: 0px;
+            width: 100%;
+        }
+
+        /*制作圆角表格*/
+        .bordered{
+            border: 1px solid #cccccc ;
+            border-radius: 6px;
+            box-shadow: 0 1px 1px #ccc;
+        }
+
+        .bordered tr{
+            -o-transition: all 0.1s ease-in-out;
+            -webkit-transition:all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition:all 0.1s ease-in-out;
+            transition:all 0.1s ease-in-out;
+        }
+
+        .bordered .highlight,
+        .bordered tr:hover{
+            background: #fbf8e9;
+        }
+
+        .bordered td,
+        .bordered th{
+            border-left: 1px solid #cccccc;
+            border-top: 1px solid #cccccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .bordered th{
+           /* 表格表头添加渐变背景色*/
+            background-color:#dce9f9;
+            background-image: -webkit-gradient(linear,left top ,left bottom,from(#ebf3fc),to(#dce9f9));
+            background-image: -webkit-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: -moz-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: -o-linear-gradient(top,#ebf3fc,#dec9f9);
+            background-image:  linear-gradient(top,#ebf3fc,#dec9f9);
+
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9)";
+
+            box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+            border-top: none;
+            text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        }
+
+       /* 使用：first-child 去除每行的第一个单元格的左边框*/
+        .bordered th:first-child,
+        .bordered td:first-child{
+            border-left:none;
+        }
+
+         /*使用：first-child设置表头第一个单元格仅仅左上角为圆角*/
+        .bordered th:first-child{
+            border-radius:6px 0 0 0 ;
+        }
+
+        .bordered th:last-child{
+            border-radius:0 6px 0 0 ;
+        }
+
+        .bordered tr:last-child td:last-child{
+            border-radius:0 0  6px 0;
+        }
+
+        .bordered tr:last-child td:last-child{
+            border-radius:0 0 0 6px;
+        }
+
+        /*========制作Zebra表格（斑马线表格）效果=========*/
+        .zebra td,
+        .zebra th{
+            padding: 10px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .zebra .alternate,
+        .zebra tbody tr:nth-child(even){
+            background:#f5f5f5;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+        }
+
+        .zebra th{
+            text-align: left;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+            border-bottom: 1px solid #cccccc;
+            background-color:#eeeeee;
+            background-image: -webkit-gradient(linear,left top, left bottom, from(#f5f5f5),to(#eee));
+            background-image: -webkit-linear-gradient(top,#f5f5f5,#eee);
+            background-image: -moz-linear-gradient(top,#f5f5f5,#eee);
+            background-image: -ms-linear-gradient(top,#f5f5f5,#eee);
+            background-image: -o-linear-gradient(top,#f5f5f5,#eee);
+            background-image:linear-gradient(top,#f5f5f5,#eee);
+
+
+        }
+
+
+        /*使用 :first-child设置表格表头第一个单元格左上角为圆角*/
+        .zebra th:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        /*使用 :last-child设置表格表头最后一个单元格右上角为圆角*/
+        .zebra th:last-child {
+            border-radius: 0 6px 0 0;
+        }
+
+        .zebra tfoot td {
+            border-bottom: 0;
+            border-top: 1px solid #fff;
+            background-color: #f1f1f1;
+        }
+
+        /*使用 :first-child设置表格脚部第一个单元格左下角为圆角*/
+        .zebra tfoot td:first-child {
+            border-radius: 0 0 0 6px;
+        }
+
+        /*使用 :last-child设置表格脚部最后一个单元格右下角为圆角*/
+        .zebra tfoot td:last-child {
+            border-radius: 0 0 6px 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="demo">
+    <table class="bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>IMDB Top 10 Movies</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>The Shawshank Redemption</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The Godfather</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The Godfather:Part II</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>The Good, the Bad and the Ugly</td>
+                <td>1966</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <p style="height: 50px"></p>
+    <table class="zebra">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>IMDB Top 10 Movies</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>The Shawshank Redemption</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The Godfather</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The Godfather:Part II</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>The Good, the Bad and the Ugly</td>
+                <td>1966</td>
+            </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

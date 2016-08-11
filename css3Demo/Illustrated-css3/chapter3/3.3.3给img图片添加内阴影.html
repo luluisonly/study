@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>img添加内阴影</title>
+    <style>
+        .box-shadow{
+            box-shadow: 0 0 8px 2px red inset;
+            display: inline-block;
+        }
+        img{
+            z-index: -1;
+            position: relative;
+
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="box-shadow">
+    <img src="http://placeKitten.com/150/151" alt="cat" />
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>用border-color实现立体渐变边框</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            border: 10px solid transparent;
+            border-radius: 15px 0 15px 0;
+            -moz-border-top-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+            -moz-border-right-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+            -moz-border-bottom-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+            -moz-border-left-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>box-shadow属性使用</title>
+    <style>
+        .box-shadow{
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            margin: 20px;
+        }
+        .top{
+            box-shadow: 0 -2px 5px -3px red;
+        }
+        .right{
+            box-shadow: 2px 0 5px -3px red;
+        }
+        .bottom{
+            box-shadow: 0 2px 5px -3px red;
+        }
+        .left{
+            box-shadow: -2px 0 5px -3px red;
+        }
+
+        .three{
+            box-shadow: 0 0 10px -6px red, 2px 0 10px -6px red, 0 2px 10px -6px red ,-2px 0 10px -6px red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box-shadow top"></div>
+<div class="box-shadow right"></div>
+<div class="box-shadow bottom"></div>
+<div class="box-shadow left"></div>
+<div class="box-shadow three"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>利用图片做边框背景</title>
+    <style>
+        .border-image{
+            width: 150px;
+            height: 100px;
+            border: 27px solid;
+            -webkit-border-image:url(border.png) 27 round stretch;
+            -moz-border-image: url(border.png) 27 round stretch;
+            -o-border-image: url(border.png) 27 round stretch;
+            -ms-border-image: url(border.png) 27 round stretch;
+            border-image: url(border.png) 27 round stretch;
+        }
+    </style>
+</head>
+<body>
+<div class="border-image"></div>
+</body>
+</html>
