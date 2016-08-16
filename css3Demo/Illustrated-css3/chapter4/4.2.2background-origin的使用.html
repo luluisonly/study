@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>background-origin的使用</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dashed rgba(0,0,0,0.3);
+            background: orange url(bg.png) no-repeat left top;
+            margin: 30px;
+        }
+        .padding-box{
+            -webkit-background-origin:padding;
+            -webkit-background-origin:padding-box;
+            -moz-background-origin:padding;
+            -moz-background-origin:padding-box;
+            -o-background-origin: padding-box;
+            -ms-bacnground-origin:padding-box;
+            background-origin: padding-box;
+        }
+        .border-box{
+            -webkit-background-origin:border;
+            -wekit-background-origin:border-box;
+            -moz-background-origin:border;
+            -moz-background-origin:border-box;
+            -o-banckground-origin:border-box;
+            -ms-background-origin: border-box;
+            background-origin: border-box;
+        }
+
+        .content-box{
+            -webkit-background-origin:content;
+            -webkit-background-origin:content-box;
+            -moz-background-origin:content;
+            -moz-background-origin:content-box;
+            -o-background-origin: content-box;
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+<h1>padding-box</h1>
+<div class="box padding-box"></div>
+<div class="box border-box"></div>
+<div class="box content-box"></div>
+</body>
+</html>

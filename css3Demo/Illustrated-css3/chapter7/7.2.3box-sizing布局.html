@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>box-sizing拯救布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 960px;
+            margin: 0 auto;
+            color: #FFFFFF;
+            font-size: 30px;
+            text-align: center;
+            background: #cccccc;
+        }
+        #header{
+            width: 100%;
+            padding: 10px;
+            height: 100px;
+            background:#38382e;
+            margin-bottom: 10px;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -o-box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            box-sizing:border-box;
+        }
+        .sideBar{
+            float: left;
+            width: 200px;
+            height: 300px;
+            margin-right: 20px;
+            background: pink;
+            padding: 10px;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .content{
+            float: left;
+            width: 720px;
+            height: 300px;
+            background:#c8ca30;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #footer{
+            background:#cc4ad5;
+            height: 100px;
+            clear: both;
+            padding: 10px;
+            width: 100%;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header">页眉</div>
+        <div class="sideBar">侧边栏</div>
+        <div class="content">主内容</div>
+        <div id="footer">页脚</div>
+    </div>
+</body>
+</html>

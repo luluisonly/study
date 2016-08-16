@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title></title>
+    <style>
+        .text-wrap{
+            width: 600px;
+            margin: 10px auto;
+            padding: 10px 0px;
+            border: 5px solid #cccccc;
+            position: relative;
+            box-shadow: 0 0 4px rgba(0,0,0,0.8);
+            clear: both;
+            font-family: 'Airal','sans-serif';
+            font-size: 50px;
+            text-align: center;
+            color: #f7edf7;
+        }
+
+        .box1 {
+            text-shadow:0px 0px 0 rgb(188,178,188),1px 0px 0 rgb(173,163,173),2px 0px 0 rgb(157,147,157),3px 0px 0 rgb(142,132,142),4px 0px 0 rgb(126,116,126),5px 0px 0 rgb(111,101,111),6px 0px 0 rgb(95,85,95), 7px 0px 0 rgb(79,69,79),8px 0px 7px rgba(0,0,0,0.35),8px 0px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box2 {
+            text-shadow:0px 0px 0 rgb(188,178,188),1px -1px 0 rgb(173,163,173),2px -2px 0 rgb(157,147,157),3px -3px 0 rgb(142,132,142),4px -4px 0 rgb(126,116,126),5px -5px 0 rgb(111,101,111),6px -6px 0 rgb(95,85,95), 7px -7px 0 rgb(79,69,79),8px -8px 7px rgba(0,0,0,0.35),8px -8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box3 {
+            text-shadow:0px 0px 0 rgb(188,178,188),0px -1px 0 rgb(173,163,173),0px -2px 0 rgb(157,147,157),0px -3px 0 rgb(142,132,142),0px -4px 0 rgb(126,116,126),0px -5px 0 rgb(111,101,111),0px -6px 0 rgb(95,85,95), 0px -7px 0 rgb(79,69,79),0px -8px 7px rgba(0,0,0,0.35),0px -8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box4 {
+            text-shadow:0px 0px 0 rgb(188,178,188),-1px -1px 0 rgb(173,163,173),-2px -2px 0 rgb(157,147,157),-3px -3px 0 rgb(142,132,142),-4px -4px 0 rgb(126,116,126),-5px -5px 0 rgb(111,101,111),-6px -6px 0 rgb(95,85,95), -7px -7px 0 rgb(79,69,79),-8px -8px 7px rgba(0,0,0,0.35),-8px -8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box5 {
+            text-shadow:0px 0px 0 rgb(188,178,188),-1px 0px 0 rgb(173,163,173),-2px 0px 0 rgb(157,147,157),-3px 0px 0 rgb(142,132,142),-4px 0px 0 rgb(126,116,126),-5px 0px 0 rgb(111,101,111),-6px 0px 0 rgb(95,85,95), -7px 0px 0 rgb(79,69,79),-8px 0px 7px rgba(0,0,0,0.35),-8px 0px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+
+        .box6 {
+            text-shadow:0px 0px 0 rgb(188,178,188),-1px 1px 0 rgb(173,163,173),-2px 2px 0 rgb(157,147,157),-3px 3px 0 rgb(142,132,142),-4px 4px 0 rgb(126,116,126),-5px 5px 0 rgb(111,101,111),-6px 6px 0 rgb(95,85,95), -7px 7px 0 rgb(79,69,79),-8px 8px 7px rgba(0,0,0,0.35),-8px 8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box7 {
+            text-shadow:0px 0px 0 rgb(188,178,188),0px 1px 0 rgb(173,163,173),0px 2px 0 rgb(157,147,157),0px 3px 0 rgb(142,132,142),0px 4px 0 rgb(126,116,126),0px 5px 0 rgb(111,101,111),0px 6px 0 rgb(95,85,95), 0px 7px 0 rgb(79,69,79),0px 8px 7px rgba(0,0,0,0.35),0px 8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box8 {
+            text-shadow:0px 0px 0 rgb(188,178,188),1px 1px 0 rgb(173,163,173),2px 2px 0 rgb(157,147,157),3px 3px 0 rgb(142,132,142),4px 4px 0 rgb(126,116,126),5px 5px 0 rgb(111,101,111),6px 6px 0 rgb(95,85,95), 7px 7px 0 rgb(79,69,79),8px 8px 7px rgba(0,0,0,0.35),8px 8px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+        .box9{
+            text-shadow:0px 0px 0 rgb(188,178,188),1px 0px 0 rgb(173,163,173),2px 0px 0 rgb(157,147,157),3px 0px 0 rgb(142,132,142),4px 0px 0 rgb(126,116,126),5px 0px 0 rgb(111,101,111),6px 0px 0 rgb(95,85,95), 7px 0px 0 rgb(79,69,79),8px 0px 7px rgba(0,0,0,0.35),8px 0px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-wrap box1">0度</div>
+    <div class="text-wrap box2">45度</div>
+    <div class="text-wrap box3">90度</div>
+    <div class="text-wrap box4">135度</div>
+    <div class="text-wrap box5">180度</div>
+    <div class="text-wrap box6">225度</div>
+    <div class="text-wrap box7">270度</div>
+    <div class="text-wrap box8">315度</div>
+    <div class="text-wrap box9">360度</div>
+</body>
+</html>

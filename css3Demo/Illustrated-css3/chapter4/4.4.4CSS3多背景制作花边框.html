@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>利用多背景制作花边</title>
+    <style>
+        .demo{
+            width: 240px;
+            border: 20px solid rgba(104,104,142,0.5);
+            border-radius: 10px;
+            padding: 80px 60px;
+            color: #f36;
+            font-size: 25px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .multipleBg{
+            background: url("bg-tl.png") no-repeat left top,
+                        url('bg-tr.png') no-repeat right top,
+                        url('bg-bl.png') no-repeat left bottom,
+                        url('bg-br.png') no-repeat right bottom,
+                        url("bg-repeat.png") repeat left top;
+
+            -webkit-background-origin:border-box,border-box,border-box,border-box,padding-box;
+            -moz-background-origin:border-box,border-box,border-box,border-box,padding-box;
+            -o-background-origin:border-box,border-box,border-box,border-box,padding-box;
+            -ms-background-origin:border-box,border-box,border-box,border-box,padding-box;
+            background-origin:border-box,border-box,border-box,border-box,padding-box;
+            -webkit-background-clip:border-box;
+            -moz-background-clip:border-box;
+            -o-background-clip:border-box;
+            background-clip:border-box;
+        }
+
+    </style>
+</head>
+<body>
+<div class="demo multipleBg"></div>
+</body>
+</html>
