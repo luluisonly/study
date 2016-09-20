@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title></title>
+</head>
+<body>
+<script>
+ /*方法一*/
+  /*  var cache = {};
+    var mult = function(){
+        var args = Array.prototype.join.call(arguments,',');
+        if(cache[args]){
+            return cache[args];
+        }
+
+        var a = 1;
+        for(var i = 0, l = arguments.length ;i < l; i++){
+                a = a * arguments[i];
+        }
+
+        return cache[args] = a;
+    };
+
+    alert(mult(1,2,3));
+    alert(mult(1,2,3));*/
+
+
+// 方法二
+//避免cache 这个变量在其他地方被不小心修改而引发的错误，
+/*    var mult = (function(){
+        var cache = {};
+        return function(){
+            var args = Array.prototype.join.call(arguments,',');
+            if(args in cache){
+                return cache[args];
+            }
+
+            var a = 1;
+            for(var i = 0, l = arguments.length; i < l; i++){
+                a = a * arguments[i];
+            }
+            console.log(a);
+            return cache[args] = a;
+        }
+    })();
+
+
+    alert(mult(1,2,3));
+    alert(mult(1,2,3));*/
+
+// 方法三
+    var mult = (function(){
+        var cache = {};
+        var calculate = function(){
+            var a = 1;
+            for(var i = 0,l = arguments.length; i < l;i++){
+                a = a * arguments[i];
+            }
+            return a;
+        };
+        return function(){
+            var args = Array.prototype.join.call( arguments,',');
+            if(args in cache){
+                return cache[args];
+            }
+            return cache[args] = calculate.apply(null , arguments);
+        }
+    })();
+
+    alert(mult(1,2,3));
+    alert(mult(1,2,3));
+</script>
+</body>
+</html>

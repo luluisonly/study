@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>loading动画</title>
+    <style>
+        @keyframes loader {
+            to{
+                background-position: -600px 0;
+            }
+
+        }
+        .loader{
+            width: 60px;
+            height: 60px;
+            background:url("loading.png") no-repeat 0 0;
+            animation: loader 1s infinite steps(10);
+
+            /*把文本影藏起来*/
+            text-indent: 200%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+   </style>
+</head>
+<body>
+<div class="loader">loading...</div>
+</body>
+</html>

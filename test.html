@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>js继承</title>
+  <!--  <script>
+        function Person (name){
+            this.name = name;
+            this.callName =  function(){
+                console.log("my name is "+this.name);
+            }
+        }
+
+        Person.prototype.sayHello = function(){
+            console.log("hello,my name is "+this.name);
+        };
+
+        function A(){
+            this.age = arguments[0];
+            Person.call(this);
+            console.log('my age is '+this.age);
+        }
+
+       // A.prototype = Person.prototype; // 存在一个风险 A 原型链改变了person 原型链
+
+        //A.prototype = Object.create(Person.prototype);
+
+        for(var pro in Person.prototype){
+            A.prototype[pro] = Person.prototype[pro];
+        }
+
+        A.prototype.sayHello =function(){
+            console.log('hello,hello,hello,hello!');
+        };
+        A.prototype.constructor = A;
+
+        var a = new A(12,'a');
+       // a.name='aaa';
+        a.sayHello();//原型链继承调用
+        a.callName();// 用call调用
+        console.log('-------------');
+        var p = new Person('aa');
+        p.sayHello();
+
+    </script>-->
+
+    <!--<script>
+
+        function Person(){
+            this.name = 'p';
+            this.age = '12';
+            this.sayHello = function(){
+                console.log('hello'+' '+this.name+' '+this.age);
+            }
+        }
+
+        Person.prototype.callName = function(){
+            console.log("my name is "+this.name);
+        }
+
+        function A (){
+            this.sex = 'man';
+        }
+
+        A.prototype = new Person();
+        A.prototype.constructor = A;
+
+        A.prototype.age = 15;
+        A.prototype.callName = function(){
+            console.log('a call name');
+        };
+        var a = new A();
+        debugger
+
+        a.sayHello();
+        a.callName();
+
+        var p = new Person();
+        p.sayHello();
+        p.callName()
+        debugger
+    </script>-->
+    <!--<script>
+        //父类
+        function person(){
+            this.hair = 'black';
+            this.eye = 'black';
+            this.skin = 'yellow';
+            this.view = function(){
+                return this.hair + ',' + this.eye + ',' + this.skin;
+            }
+        }
+
+        //子类
+        function man(){
+            // person.apply(this,new Array());
+            person.apply(this,[]);
+            this.feature = ['beard','strong'];
+            //this.view = 'a'; 可以把父节点的function 覆盖掉
+        }
+
+        var one = new man();
+        debugger
+
+        console.log(one.feature); //['beard','strong']
+        console.log(one.hair); //black
+        console.log(one.eye); //black
+        console.log(one.skin); //yellow
+        console.log(one.view()); //black,black,yellow
+    </script>-->
+
+  <!--  <script>
+        var ClassExtend = function(dest, source, proto){
+            if( typeof source === 'object' ){
+                var args = slice.call(arguments, 1);
+                args.unshift(dest.prototype);
+                Extend.apply(null, args);
+                return dest;
+            }
+
+            var f = function(){};
+            f.prototype = source.prototype;
+
+            var fObj = new f();
+
+            for(var i in fObj){
+                dest.prototype[i] = fObj[i];
+            }
+
+            dest.prototype.constructor = dest;
+            dest.prototype.superclass = source.prototype;
+
+            if(source.prototype.constructor == Object.prototype.constructor)
+                source.prototype.constructor = source;
+
+            if( proto ) {
+                for(i in proto) {
+                    dest.prototype[i] = proto[i];
+                }
+            }
+
+            Extend(dest, source);
+
+            return dest;
+        };
+
+    </script>-->
+
+    <script>
+        var name = 'a';
+        var user = {
+            name:'user',
+            getName:function(){
+                return this.name;
+            }
+        }
+
+        var getname = user.getName;
+        console.log(getname()+'...');
+        console.log(user.getName());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

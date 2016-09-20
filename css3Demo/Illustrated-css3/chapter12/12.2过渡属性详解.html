@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title></title>
+    <style>
+        .transition{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+            transition-property:all;
+            transition-duration: 1s;
+            background: red;
+            overflow: hidden;
+            margin-top: 1%;
+        }
+        .transition:active{
+            padding: 50px;
+            background: #000000;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="transition">fsahfdjasfjfhjsafhjfhjsdahfj</div>
+<script>
+    var tt = document.querySelector('.transition');
+    tt.addEventListener("click", function(){
+       //this.className = 'change';
+    }, false);
+
+    //safari 3.1到6.0代码
+    tt.addEventListener("webkitTransitionEnd", function(){ //动画结束时事件
+       // this.className = this.className.replace('change', ' ');
+        console.log(2+'.......');
+    }, false);
+    // 标准语法
+    tt.addEventListener('MozTransitionEnd',function(){
+        console.log(3+'.......');
+    },false)
+</script>
+</body>
+</html>

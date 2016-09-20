@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>延续局部变量的寿命</title>
+</head>
+<body>
+<script>
+   /* var report = function(src){
+        var img = new Image();
+        img.src = src;
+    };
+    report('http://placekitten.com/20/21');*/
+
+    var report = (function(src){
+        var imgs = [];
+        return function(src){
+            var img = new Image();
+            imgs.push(img);
+            img.src = src;
+        }
+    })(src);
+    report(src);
+</script>
+
+</body>
+</html>

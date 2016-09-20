@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>css 字体打印效果</title>
+    <style>
+        @keyframes typing {
+            from { width: 0}
+        }
+        @keyframes caret {
+            50%{
+                border-color: transparent;
+            }
+        }
+        h1{
+            width: 15ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.05em solid;
+            animation: typing 8s steps(15),
+                        caret 1s steps(1) infinite;
+        }
+    </style>
+
+</head>
+<body>
+<h1>css is awesome hahaha !</h1>
+<script>
+    window.onload=function(){
+        function $$(selector,context){
+            context = context || document;
+            var elements = context.querySelectorAll(selector);
+            return Array.prototype.slice.call(elements);
+        }
+        $$('h1').forEach(function(h1){
+            var len = h1.textContent.length,s = h1.style;
+            s.width = len + 'ch';
+            s.animationTimingFunction = "steps("+len+"),steps(1)"
+        })
+    }
+
+</script>
+</body>
+</html>

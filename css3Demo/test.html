@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <title>test</title>
     <style>
-        body {
-            padding: 5%;
-        }
-        .btn {
-            padding: 0.3em 1em;
-           /* border: 1px solid #446d88;
-            background: #58a linear-gradient(#77a0bb, #58a);*/
-            border: 1px solid rgba(0,0,0,0.1);
-            backgroound:#58a linear-gradient(hsla(0,0%,100%,0.2),transparent);
-
-            border-radius: 4px;
-            box-shadow: 0 0.0625em 0.03125em rgba(0,0,0,0.5);
-            color: white;
-            text-shadow: 0 -0.0625em 0.0625em rgba(0,0,0,0.5);
-            text-decoration: none;
-            /*font-size: 20px;
-            line-height: 30px;*/
-            font-size: 125%;
-            line-height: 1.5; /*30px/20px;*/
+        *{
+            margin: 0;
+            padding: 0;
         }
 
-        button.ok{
-            background-color: deepskyblue;
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: green;
         }
-        button.cancle{
-            background-color:indianred;
+        .one{
+            margin-bottom: 50px;
         }
-
+        .two{
+            margin-top: 50px;
+        }
+        .three{
+            margin-right: 50px;
+            display: inline-block;
+        }
+        .four{
+            margin-left: 50px;
+            display: inline-block;
+        }
+        span{
+            border: 1px solid red;
+            margin-left: 50px;
+            margin-top: 10px;
+            padding-top: 10px;/*//产生了作用*/
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-<div>
-        <button class="btn">Yes!</button>
+<!--
+<div class="one">1</div>
+<div class="two">2</div>
+-->
 
-        <button class="btn ok">on</button>
-        <button class="btn cancle">cancle</button>
-</div>
+
+<!--<div class="three">3</div>
+<div class="four"></div>
+<div class="five"></div>-->
+<ul>
+    <li class="one">1</li>
+    <li class="two">2</li>
+    <li class="three">3</li>
+    <li class="four">4</li>
+</ul>
+
+<span>aaaaaa</span>
+<span>bbbbbb</span>
 </body>
 </html>

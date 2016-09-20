@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>广告图</title>
+    <style>
+        .sanjiao:before{
+            content: '';
+            position: absolute;
+            display: inline-block;
+            left: -20px;
+            width: 0;
+            height: 0px;
+            border-right: 10px solid red;
+            border-left:  10px solid transparent;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        .sanjiao{
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+            height: 20px;
+            background: red;
+            margin-left: 10px;
+        }
+
+        @keyframes panoramic {
+            to{background-position: 100% 0}
+        }
+        .panoramic{
+            border: 1px solid;
+            gigitwidth: 150px;
+            height: 150px;
+            background: url("http://placeKitten.com/800/150") no-repeat;
+            background-size:auto 100%;
+            animation: panoramic 10s linear infinite alternate;
+            animation-play-state: paused;
+        }
+
+        .panoramic:hover,.panoramic:focus{
+            animation-play-state: running;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="panoramic"></div>
+<div class="sanjiao">hffff哈哈哈哈hh</div>
+
+</body>
+</html>

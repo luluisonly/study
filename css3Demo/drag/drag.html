@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>拖拽</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       #drag{
+           height: 100px;
+           width: 100px;
+           background: red;
+           position: absolute;
+           border: 10px solid #000000;
+       }
+    </style>
+</head>
+<body>
+<div id="drag"></div>
+<script>
+    window.onload = function(){
+        var drag = document.getElementById('drag');
+        drag.onmousedown = function(e){
+            var dX = e.clientX - drag.offsetLeft;
+            var dY = e.clientY - drag.offsetTop;
+            document.onmousemove = function(e){
+                var l = e.clientX - dX;
+                var t = e.clientY - dY;
+                if(l < 0){
+                    l = 0;
+                }/*else if(document.documentElement.clientWidth - (drag.offsetLeft + e.target.clientWidth+ (e.target.clientLeft*2))<0){
+                   // l =drag.offsetLeft;
+                }*/
+
+               /*if(t<0){
+                    t = 0;
+                }
+                else if( t > document.documentElement.clientHeight - drag.offsetHeight;)*/
+
+                drag.style.left = l + 'px';
+                drag.style.top = t + 'px';
+                document.onmouseup = function(e){
+                    alert(1);
+                    drag.mousemove = null;
+                };
+            };
+
+            //return false;
+        }
+    }
+</script>
+</body>
+</html>
